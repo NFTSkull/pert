@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 interface Proyecto {
   nombre: string
   ubicacion: string
@@ -86,12 +88,14 @@ export default function Proyectos() {
               >
                 {/* Imagen del proyecto */}
                 <div className="relative h-48 overflow-hidden">
-                  <img
+                  <Image
                     src={proyecto.imagen}
                     alt={proyecto.nombre}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-300"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
-                  <div className="absolute top-4 right-4">
+                  <div className="absolute top-4 right-4 z-10">
                     <span
                       className={`px-3 py-1 rounded-full text-xs font-semibold ${
                         categoriaColors[proyecto.categoria]

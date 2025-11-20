@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function QuienesSomos() {
   const pilares = [
     {
@@ -93,10 +95,12 @@ export default function QuienesSomos() {
 
             {/* Columna derecha: Imagen */}
             <div className="relative h-64 sm:h-80 lg:h-96 rounded-2xl overflow-hidden shadow-xl">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
                 alt="Equipo de trabajo y planos de construcción"
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
           </div>
