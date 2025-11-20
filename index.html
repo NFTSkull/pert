@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PERT Servicios Constructivos. Construimos proyectos exitosos con calidad, innovación y confianza desde 2020.">
+    <title>PERT Servicios Constructivos | Constructora en Jalisco y Nayarit</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            dark: '#0B1F33',
+                            DEFAULT: '#0B1F33',
+                        },
+                        accent: {
+                            DEFAULT: '#F59E0B',
+                            dark: '#D97706',
+                        },
+                        background: {
+                            light: '#F3F4F6',
+                            DEFAULT: '#FFFFFF',
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="text-gray-900 antialiased">
+    
+    <!-- Header / Navbar -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-sm">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#inicio" class="flex flex-col">
+                    <span class="text-2xl font-bold text-primary-dark">PERT</span>
+                    <span class="text-xs text-gray-600 -mt-1">Servicios Constructivos</span>
+                </a>
+
+                <!-- Menú de navegación - Desktop -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-gray-700 hover:text-accent transition-colors duration-200 font-medium">Inicio</a>
+                    <a href="#quienes-somos" class="text-gray-700 hover:text-accent transition-colors duration-200 font-medium">¿Quiénes somos?</a>
+                    <a href="#proyectos" class="text-gray-700 hover:text-accent transition-colors duration-200 font-medium">Proyectos</a>
+                    <a href="#crecimiento" class="text-gray-700 hover:text-accent transition-colors duration-200 font-medium">Crecimiento</a>
+                    <a href="#contacto" class="text-gray-700 hover:text-accent transition-colors duration-200 font-medium">Contacto</a>
+                    <a href="#contacto" class="bg-accent text-white px-6 py-2 rounded-lg font-semibold hover:bg-accent-dark transition-colors duration-200">Contactar</a>
+                </div>
+
+                <!-- Botón menú móvil -->
+                <button id="mobile-menu-btn" class="md:hidden text-primary-dark" aria-label="Menú">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menú móvil -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="#inicio" class="text-gray-700 hover:text-accent transition-colors duration-200 font-medium py-2">Inicio</a>
+                    <a href="#quienes-somos" class="text-gray-700 hover:text-accent transition-colors duration-200 font-medium py-2">¿Quiénes somos?</a>
+                    <a href="#proyectos" class="text-gray-700 hover:text-accent transition-colors duration-200 font-medium py-2">Proyectos</a>
+                    <a href="#crecimiento" class="text-gray-700 hover:text-accent transition-colors duration-200 font-medium py-2">Crecimiento</a>
+                    <a href="#contacto" class="text-gray-700 hover:text-accent transition-colors duration-200 font-medium py-2">Contacto</a>
+                    <a href="#contacto" class="bg-accent text-white px-6 py-2 rounded-lg font-semibold hover:bg-accent-dark transition-colors duration-200 text-center">Contactar</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(rgba(11, 31, 51, 0.7), rgba(11, 31, 51, 0.7)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80');">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+            <div class="max-w-4xl mx-auto text-center text-white">
+                <!-- Título principal -->
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
+                    PERT Servicios Constructivos
+                </h1>
+
+                <!-- Subtítulo -->
+                <p class="text-xl sm:text-2xl md:text-3xl mb-6 text-gray-100 font-light">
+                    Construimos proyectos exitosos, con calidad, innovación y confianza.
+                </p>
+
+                <!-- Texto descriptivo -->
+                <p class="text-base sm:text-lg md:text-xl mb-10 text-gray-200 max-w-3xl mx-auto">
+                    Desde el 20 de diciembre de 2020, contribuyendo al desarrollo de nuestros clientes a través de soluciones constructivas a la medida.
+                </p>
+
+                <!-- Botones de acción -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+                    <a href="#proyectos" class="bg-accent text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-accent-dark transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        Ver proyectos ejecutados
+                    </a>
+                    <a href="#quienes-somos" class="bg-white/10 backdrop-blur-sm text-white border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/20 transition-all duration-200">
+                        Conocer a la empresa
+                    </a>
+                </div>
+
+                <!-- Franja de métricas -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-16 pt-12 border-t border-white/20">
+                    <div class="text-center">
+                        <div class="text-3xl sm:text-4xl font-bold text-accent mb-2">Desde 2020</div>
+                        <div class="text-sm sm:text-base text-gray-300">Años de experiencia</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl sm:text-4xl font-bold text-accent mb-2">+30</div>
+                        <div class="text-sm sm:text-base text-gray-300">Colaboradores administrativos</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl sm:text-4xl font-bold text-accent mb-2">Jalisco y Nayarit</div>
+                        <div class="text-sm sm:text-base text-gray-300">Proyectos ejecutados</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiénes Somos Section -->
+    <section id="quienes-somos" class="py-16 sm:py-20 lg:py-24 bg-background-light">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <!-- Layout de dos columnas -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
+                    <!-- Columna izquierda: Texto -->
+                    <div>
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-dark mb-6">
+                            ¿Quiénes somos?
+                        </h2>
+                        <div class="space-y-4 text-gray-700 text-lg leading-relaxed">
+                            <p>
+                                Somos una constructora que contribuye al desarrollo de nuestros clientes a través de la ejecución de proyectos exitosos, basados en la calidad del servicio y respaldados por un equipo de trabajo comprometido con la excelencia.
+                            </p>
+                            <p>
+                                Nuestra prioridad es mantener la calidad, la innovación tecnológica y constructiva, fomentando una relación de confianza fuerte y cercana con cada cliente.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Columna derecha: Imagen -->
+                    <div class="relative h-64 sm:h-80 lg:h-96 rounded-2xl overflow-hidden shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Equipo de trabajo y planos de construcción" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Pilares en cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                    <!-- Pilar 1: Calidad -->
+                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
+                        <div class="text-accent mb-4">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary-dark mb-3">Calidad del servicio</h3>
+                        <p class="text-gray-600 leading-relaxed">Comprometidos con la excelencia en cada proyecto que ejecutamos.</p>
+                    </div>
+
+                    <!-- Pilar 2: Innovación -->
+                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
+                        <div class="text-accent mb-4">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary-dark mb-3">Innovación tecnológica y constructiva</h3>
+                        <p class="text-gray-600 leading-relaxed">Aplicamos las mejores prácticas y tecnologías del sector constructivo.</p>
+                    </div>
+
+                    <!-- Pilar 3: Confianza -->
+                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
+                        <div class="text-accent mb-4">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary-dark mb-3">Relación de confianza con el cliente</h3>
+                        <p class="text-gray-600 leading-relaxed">Fomentamos una relación cercana y transparente con cada cliente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos Section -->
+    <section id="proyectos" class="py-16 sm:py-20 lg:py-24 bg-background-light">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <!-- Encabezado de sección -->
+                <div class="text-center mb-12 lg:mb-16">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-dark mb-4">
+                        Proyectos ejecutados
+                    </h2>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                        Hemos participado en proyectos residenciales, de servicios y de desarrollo social en distintos puntos del país.
+                    </p>
+                </div>
+
+                <!-- Grid de proyectos -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                    <!-- Proyecto 1: Ajijic Casa #20 -->
+                    <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Ajijic Casa #20" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div class="absolute top-4 right-4">
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">Residencial</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-primary-dark mb-2">Ajijic Casa #20</h3>
+                            <div class="flex items-center text-gray-600 mb-2">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span class="text-sm">Ajijic, Jalisco</span>
+                            </div>
+                            <p class="text-gray-700 font-medium">Casa habitación</p>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 2: Arama Bay -->
+                    <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80" alt="Arama Bay" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div class="absolute top-4 right-4">
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">Residencial</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-primary-dark mb-2">Arama Bay</h3>
+                            <div class="flex items-center text-gray-600 mb-2">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span class="text-sm">Bucerías, Nayarit</span>
+                            </div>
+                            <p class="text-gray-700 font-medium">Torre de departamentos</p>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 3: Brisamare -->
+                    <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Brisamare" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div class="absolute top-4 right-4">
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">Comercial</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-primary-dark mb-2">Brisamare</h3>
+                            <div class="flex items-center text-gray-600 mb-2">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span class="text-sm">Bucerías, Nayarit</span>
+                            </div>
+                            <p class="text-gray-700 font-medium">Showroom</p>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 4: Huaxtla -->
+                    <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&q=80" alt="Huaxtla" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div class="absolute top-4 right-4">
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-orange-100 text-orange-800">Infraestructura</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-primary-dark mb-2">Huaxtla</h3>
+                            <div class="flex items-center text-gray-600 mb-2">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span class="text-sm">El Arenal, Jalisco</span>
+                            </div>
+                            <p class="text-gray-700 font-medium">Muro perimetral</p>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 5: Lancor -->
+                    <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Lancor" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div class="absolute top-4 right-4">
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-orange-100 text-orange-800">Infraestructura</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-primary-dark mb-2">Lancor</h3>
+                            <div class="flex items-center text-gray-600 mb-2">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span class="text-sm">El Capulín, Jalisco</span>
+                            </div>
+                            <p class="text-gray-700 font-medium">Caseta de ingreso</p>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 6: Mayama -->
+                    <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80" alt="Mayama" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div class="absolute top-4 right-4">
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-100 text-purple-800">Desarrollo Social</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-primary-dark mb-2">Mayama</h3>
+                            <div class="flex items-center text-gray-600 mb-2">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span class="text-sm">Tonalá, Jalisco</span>
+                            </div>
+                            <p class="text-gray-700 font-medium">Centro de desarrollo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crecimiento Section -->
+    <section id="crecimiento" class="py-16 sm:py-20 lg:py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <!-- Encabezado -->
+                <div class="text-center mb-12 lg:mb-16">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-dark mb-4">
+                        Crecimiento 2020–2025
+                    </h2>
+                    <div class="max-w-3xl mx-auto space-y-4 text-lg text-gray-700">
+                        <p>
+                            Iniciamos operaciones con un equipo de 10 colaboradores administrativos. En 2022, una vez consolidada la empresa, comenzamos a ampliar nuestro personal.
+                        </p>
+                        <p>
+                            Con el paso de los años hemos mantenido un crecimiento constante y actualmente contamos con 30 empleados administrativos, con expectativas de seguir expandiéndonos durante el próximo año.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline horizontal -->
+                <div class="relative">
+                    <!-- Línea de tiempo -->
+                    <div class="hidden md:block absolute top-24 left-0 right-0 h-1 bg-gray-200">
+                        <div class="h-full bg-accent" style="width: 100%;"></div>
+                    </div>
+
+                    <!-- Hitos -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 relative">
+                        <!-- Hito 1: 2020 -->
+                        <div class="relative">
+                            <div class="hidden md:flex absolute top-20 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-accent rounded-full border-4 border-white shadow-lg z-10"></div>
+                            <div class="bg-background-light rounded-xl p-6 lg:p-8 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100 mt-12 md:mt-0">
+                                <div class="text-3xl font-bold text-accent mb-2">2020</div>
+                                <h3 class="text-xl font-bold text-primary-dark mb-3">Fundación</h3>
+                                <p class="text-gray-700 mb-4 leading-relaxed">
+                                    Iniciamos operaciones con un equipo de 10 colaboradores administrativos.
+                                </p>
+                                <div class="mt-6">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <span class="text-sm font-semibold text-gray-600">Colaboradores</span>
+                                        <span class="text-lg font-bold text-primary-dark">10</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-3">
+                                        <div class="bg-accent h-3 rounded-full transition-all duration-500" style="width: 33.33%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hito 2: 2022 -->
+                        <div class="relative">
+                            <div class="hidden md:flex absolute top-20 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-accent rounded-full border-4 border-white shadow-lg z-10"></div>
+                            <div class="bg-background-light rounded-xl p-6 lg:p-8 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100 mt-12 md:mt-0">
+                                <div class="text-3xl font-bold text-accent mb-2">2022</div>
+                                <h3 class="text-xl font-bold text-primary-dark mb-3">Consolidación y expansión</h3>
+                                <p class="text-gray-700 mb-4 leading-relaxed">
+                                    Una vez consolidada la empresa, comenzamos a ampliar nuestro personal.
+                                </p>
+                                <div class="mt-6">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <span class="text-sm font-semibold text-gray-600">Colaboradores</span>
+                                        <span class="text-lg font-bold text-primary-dark">20</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-3">
+                                        <div class="bg-accent h-3 rounded-full transition-all duration-500" style="width: 66.66%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hito 3: 2025 -->
+                        <div class="relative">
+                            <div class="hidden md:flex absolute top-20 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-accent rounded-full border-4 border-white shadow-lg z-10"></div>
+                            <div class="bg-background-light rounded-xl p-6 lg:p-8 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100 mt-12 md:mt-0">
+                                <div class="text-3xl font-bold text-accent mb-2">2025</div>
+                                <h3 class="text-xl font-bold text-primary-dark mb-3">Crecimiento constante</h3>
+                                <p class="text-gray-700 mb-4 leading-relaxed">
+                                    Actualmente contamos con 30 empleados administrativos, con expectativas de seguir expandiéndonos durante el próximo año.
+                                </p>
+                                <div class="mt-6">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <span class="text-sm font-semibold text-gray-600">Colaboradores</span>
+                                        <span class="text-lg font-bold text-primary-dark">30</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-3">
+                                        <div class="bg-accent h-3 rounded-full transition-all duration-500" style="width: 100%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Valores Section -->
+    <section class="py-16 sm:py-20 lg:py-24 bg-background-light">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <!-- Encabezado -->
+                <div class="text-center mb-12 lg:mb-16">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-dark mb-4">
+                        Nuestra forma de trabajar
+                    </h2>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                        Principios que guían cada proyecto y garantizan resultados exitosos.
+                    </p>
+                </div>
+
+                <!-- Grid de valores -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                    <!-- Valor 1 -->
+                    <div class="bg-white p-6 lg:p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 text-center">
+                        <div class="text-accent mb-4 flex justify-center">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary-dark mb-3">Enfoque en la calidad</h3>
+                        <p class="text-gray-600 leading-relaxed">Cada proyecto se ejecuta con los más altos estándares de calidad y excelencia.</p>
+                    </div>
+
+                    <!-- Valor 2 -->
+                    <div class="bg-white p-6 lg:p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 text-center">
+                        <div class="text-accent mb-4 flex justify-center">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary-dark mb-3">Innovación tecnológica y constructiva</h3>
+                        <p class="text-gray-600 leading-relaxed">Implementamos las últimas tecnologías y metodologías del sector para optimizar resultados.</p>
+                    </div>
+
+                    <!-- Valor 3 -->
+                    <div class="bg-white p-6 lg:p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 text-center">
+                        <div class="text-accent mb-4 flex justify-center">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary-dark mb-3">Acompañamiento cercano al cliente</h3>
+                        <p class="text-gray-600 leading-relaxed">Mantenemos comunicación constante y transparente durante todo el proceso constructivo.</p>
+                    </div>
+
+                    <!-- Valor 4 -->
+                    <div class="bg-white p-6 lg:p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 text-center">
+                        <div class="text-accent mb-4 flex justify-center">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary-dark mb-3">Cumplimiento y responsabilidad</h3>
+                        <p class="text-gray-600 leading-relaxed">Nos comprometemos a cumplir con los tiempos y alcances acordados en cada proyecto.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="py-16 sm:py-20 lg:py-24 relative bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(rgba(11, 31, 51, 0.9), rgba(11, 31, 51, 0.9)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80');">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <!-- Encabezado -->
+                <div class="text-center mb-12 lg:mb-16 text-white">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+                        ¿Listo para construir tu próximo proyecto?
+                    </h2>
+                    <p class="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto">
+                        Acércate a PERT Servicios Constructivos y trabajemos juntos en tu próxima obra.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                    <!-- Información de contacto -->
+                    <div class="space-y-8 text-white">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-6">Información de contacto</h3>
+                            <div class="space-y-6">
+                                <!-- Teléfono -->
+                                <div class="flex items-start">
+                                    <div class="bg-accent/20 p-3 rounded-lg mr-4">
+                                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold mb-1">Teléfono</p>
+                                        <p class="text-gray-300">[Teléfono de contacto]</p>
+                                    </div>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="flex items-start">
+                                    <div class="bg-accent/20 p-3 rounded-lg mr-4">
+                                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold mb-1">Correo electrónico</p>
+                                        <p class="text-gray-300">[Correo de contacto]</p>
+                                    </div>
+                                </div>
+
+                                <!-- Ubicación -->
+                                <div class="flex items-start">
+                                    <div class="bg-accent/20 p-3 rounded-lg mr-4">
+                                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold mb-1">Ubicación</p>
+                                        <p class="text-gray-300">Jalisco y Nayarit, México</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de contacto -->
+                    <div class="bg-white rounded-xl p-8 shadow-xl">
+                        <h3 class="text-2xl font-bold text-primary-dark mb-6">Envíanos un mensaje</h3>
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label for="nombre" class="block text-sm font-semibold text-gray-700 mb-2">Nombre completo</label>
+                                <input type="text" id="nombre" name="nombre" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all" placeholder="Ingresa tu nombre completo">
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Correo electrónico</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all" placeholder="tu@email.com">
+                            </div>
+
+                            <div>
+                                <label for="telefono" class="block text-sm font-semibold text-gray-700 mb-2">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all" placeholder="(00) 0000-0000">
+                            </div>
+
+                            <div>
+                                <label for="mensaje" class="block text-sm font-semibold text-gray-700 mb-2">Tipo de proyecto / Mensaje</label>
+                                <textarea id="mensaje" name="mensaje" required rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all resize-none" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-accent text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-accent-dark transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                                Contactar ahora
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-dark text-white py-12 lg:py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-8">
+                    <!-- Información de la empresa -->
+                    <div>
+                        <div class="mb-4">
+                            <span class="text-2xl font-bold">PERT</span>
+                            <span class="text-sm block text-gray-300">Servicios Constructivos</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-2">Desde 2020</p>
+                        <p class="text-gray-400 text-sm">Construimos proyectos exitosos con calidad, innovación y confianza.</p>
+                    </div>
+
+                    <!-- Enlaces rápidos -->
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">Enlaces rápidos</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#inicio" class="text-gray-400 hover:text-accent transition-colors duration-200 text-sm">Inicio</a></li>
+                            <li><a href="#quienes-somos" class="text-gray-400 hover:text-accent transition-colors duration-200 text-sm">¿Quiénes somos?</a></li>
+                            <li><a href="#proyectos" class="text-gray-400 hover:text-accent transition-colors duration-200 text-sm">Proyectos</a></li>
+                            <li><a href="#crecimiento" class="text-gray-400 hover:text-accent transition-colors duration-200 text-sm">Crecimiento</a></li>
+                            <li><a href="#contacto" class="text-gray-400 hover:text-accent transition-colors duration-200 text-sm">Contacto</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Información adicional -->
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">Contacto</h3>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li>Jalisco y Nayarit, México</li>
+                            <li><a href="mailto:[correo]" class="hover:text-accent transition-colors duration-200">[Correo de contacto]</a></li>
+                            <li><a href="tel:[telefono]" class="hover:text-accent transition-colors duration-200">[Teléfono de contacto]</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Línea divisoria -->
+                <div class="border-t border-gray-700 pt-8">
+                    <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                        <p>&copy; <span id="current-year"></span> PERT Servicios Constructivos. Todos los derechos reservados.</p>
+                        <p class="mt-2 md:mt-0">Desde el 20 de diciembre de 2020</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+
