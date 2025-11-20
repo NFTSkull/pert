@@ -8,6 +8,16 @@ window.addEventListener('scroll', function() {
         header.classList.remove('bg-white/95', 'shadow-md');
         header.classList.add('bg-white/90');
     }
+    
+    // Parallax effect for hero background
+    const hero = document.getElementById('inicio');
+    if (hero) {
+        const scrolled = window.pageYOffset;
+        const heroBackground = hero.querySelector('.hero-background');
+        if (heroBackground && scrolled < window.innerHeight) {
+            heroBackground.style.transform = `translateY(${scrolled * 0.5}px) scale(${1 + scrolled * 0.0005})`;
+        }
+    }
 });
 
 // Mobile menu toggle
