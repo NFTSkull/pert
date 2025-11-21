@@ -91,27 +91,46 @@ if (currentYearElement) {
     currentYearElement.textContent = new Date().getFullYear();
 }
 
-// Manejar carga del video hero para evitar mostrar imagen fallback
+// Manejar carga del video hero para carga rápida
 const heroVideo = document.getElementById('hero-video');
 if (heroVideo) {
     // Ocultar video inicialmente
     heroVideo.style.opacity = '0';
     
-    // Cuando el video puede empezar a reproducirse
-    heroVideo.addEventListener('canplaythrough', function() {
+    // Priorizar carga del video
+    heroVideo.setAttribute('preload', 'auto');
+    
+    // Cuando el video tiene suficientes datos para empezar a reproducirse
+    heroVideo.addEventListener('canplay', function() {
         this.style.opacity = '1';
         this.setAttribute('data-loaded', 'true');
+        // Intentar reproducir
+        this.play().catch(function(error) {
+            console.log('Autoplay bloqueado:', error);
+        });
     }, { once: true });
     
-    // Fallback: mostrar video después de un tiempo si no se carga
+    // Fallback más rápido: mostrar video después de 300ms si ya tiene datos
+    heroVideo.addEventListener('loadeddata', function() {
+        if (this.readyState >= 2) { // HAVE_CURRENT_DATA
+            setTimeout(() => {
+                if (this.style.opacity === '0') {
+                    this.style.opacity = '1';
+                    this.setAttribute('data-loaded', 'true');
+                }
+            }, 300);
+        }
+    }, { once: true });
+    
+    // Fallback de seguridad: mostrar después de 1 segundo máximo
     setTimeout(function() {
-        if (heroVideo.style.opacity === '0') {
+        if (heroVideo && heroVideo.style.opacity === '0') {
             heroVideo.style.opacity = '1';
             heroVideo.setAttribute('data-loaded', 'true');
         }
     }, 1000);
     
-    // Forzar carga del video
+    // Forzar carga inmediata del video
     heroVideo.load();
 }
 
