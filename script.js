@@ -91,8 +91,32 @@ if (currentYearElement) {
     currentYearElement.textContent = new Date().getFullYear();
 }
 
-// Manejar carga del video hero para carga rápida
+// Manejar pantalla de carga y video hero
+const loader = document.getElementById('loader');
+const mainContent = document.getElementById('main-content');
 const heroVideo = document.getElementById('hero-video');
+
+let videoReady = false;
+let minLoadTime = 1500; // Tiempo mínimo de carga (1.5 segundos)
+let loadStartTime = Date.now();
+
+// Función para ocultar loader y mostrar contenido
+function showContent() {
+    const elapsedTime = Date.now() - loadStartTime;
+    const remainingTime = Math.max(0, minLoadTime - elapsedTime);
+    
+    setTimeout(function() {
+        if (loader) {
+            loader.classList.add('hidden');
+        }
+        if (mainContent) {
+            mainContent.classList.add('visible');
+        }
+        // Habilitar scroll
+        document.body.style.overflow = '';
+    }, remainingTime);
+}
+
 if (heroVideo) {
     // Ocultar video inicialmente
     heroVideo.style.opacity = '0';
@@ -100,37 +124,54 @@ if (heroVideo) {
     // Priorizar carga del video
     heroVideo.setAttribute('preload', 'auto');
     
-    // Cuando el video tiene suficientes datos para empezar a reproducirse
+    // Cuando el video puede empezar a reproducirse
     heroVideo.addEventListener('canplay', function() {
-        this.style.opacity = '1';
-        this.setAttribute('data-loaded', 'true');
-        // Intentar reproducir
-        this.play().catch(function(error) {
-            console.log('Autoplay bloqueado:', error);
-        });
+        if (!videoReady) {
+            videoReady = true;
+            this.style.opacity = '1';
+            this.setAttribute('data-loaded', 'true');
+            
+            // Intentar reproducir
+            this.play().catch(function(error) {
+                console.log('Autoplay bloqueado:', error);
+            });
+            
+            // Mostrar contenido cuando el video esté listo
+            showContent();
+        }
     }, { once: true });
     
-    // Fallback más rápido: mostrar video después de 300ms si ya tiene datos
+    // Fallback: cuando el video tiene datos cargados
     heroVideo.addEventListener('loadeddata', function() {
-        if (this.readyState >= 2) { // HAVE_CURRENT_DATA
+        if (this.readyState >= 2 && !videoReady) { // HAVE_CURRENT_DATA
             setTimeout(() => {
-                if (this.style.opacity === '0') {
+                if (!videoReady) {
+                    videoReady = true;
                     this.style.opacity = '1';
                     this.setAttribute('data-loaded', 'true');
+                    showContent();
                 }
-            }, 300);
+            }, 500);
         }
     }, { once: true });
     
-    // Fallback de seguridad: mostrar después de 1 segundo máximo
+    // Fallback de seguridad: mostrar después de 3 segundos máximo
     setTimeout(function() {
-        if (heroVideo && heroVideo.style.opacity === '0') {
+        if (!videoReady && heroVideo) {
+            videoReady = true;
             heroVideo.style.opacity = '1';
             heroVideo.setAttribute('data-loaded', 'true');
+            showContent();
         }
-    }, 1000);
+    }, 3000);
     
     // Forzar carga inmediata del video
     heroVideo.load();
+} else {
+    // Si no hay video, mostrar contenido después del tiempo mínimo
+    showContent();
 }
+
+// Prevenir scroll durante la carga
+document.body.style.overflow = 'hidden';
 
