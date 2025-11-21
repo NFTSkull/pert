@@ -91,3 +91,27 @@ if (currentYearElement) {
     currentYearElement.textContent = new Date().getFullYear();
 }
 
+// Manejar carga del video hero para evitar mostrar imagen fallback
+const heroVideo = document.getElementById('hero-video');
+if (heroVideo) {
+    // Ocultar video inicialmente
+    heroVideo.style.opacity = '0';
+    
+    // Cuando el video puede empezar a reproducirse
+    heroVideo.addEventListener('canplaythrough', function() {
+        this.style.opacity = '1';
+        this.setAttribute('data-loaded', 'true');
+    }, { once: true });
+    
+    // Fallback: mostrar video después de un tiempo si no se carga
+    setTimeout(function() {
+        if (heroVideo.style.opacity === '0') {
+            heroVideo.style.opacity = '1';
+            heroVideo.setAttribute('data-loaded', 'true');
+        }
+    }, 1000);
+    
+    // Forzar carga del video
+    heroVideo.load();
+}
+
