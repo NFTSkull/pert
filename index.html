@@ -16,16 +16,20 @@
                 extend: {
                     colors: {
                         primary: {
-                            dark: '#0B1F33',
-                            DEFAULT: '#0B1F33',
+                            dark: '#2F2E2A',
+                            DEFAULT: '#2F2E2A',
+                            medium: '#585652',
+                            light: '#B7B1AA',
                         },
                         accent: {
-                            DEFAULT: '#F59E0B',
-                            dark: '#D97706',
+                            DEFAULT: '#D86F33',
+                            dark: '#C45F28',
+                            light: '#E88A5A',
                         },
                         background: {
-                            light: '#F3F4F6',
+                            light: '#F8F7F5',
                             DEFAULT: '#FFFFFF',
+                            warm: '#B7B1AA',
                         },
                     },
                 },
@@ -55,7 +59,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #0B1F33 0%, #1a3a5a 100%);
+            background: linear-gradient(135deg, #2F2E2A 0%, #585652 100%);
             z-index: 9999;
             display: flex;
             flex-direction: column;
@@ -137,7 +141,7 @@
         
         .loader-progress-bar {
             height: 100%;
-            background: linear-gradient(90deg, #F59E0B, #FCD34D);
+            background: linear-gradient(90deg, #D86F33, #E88A5A);
             border-radius: 2px;
             width: 0%;
             animation: progressLoad 2s ease-in-out infinite;
@@ -157,7 +161,7 @@
         
         /* Texto de carga */
         .loader-text {
-            color: #F59E0B;
+            color: #D86F33;
             font-size: 1.25rem;
             font-weight: 600;
             margin-top: 1.5rem;
@@ -238,7 +242,7 @@
         }
         
         .gradient-text {
-            background: linear-gradient(135deg, #F59E0B 0%, #FCD34D 100%);
+            background: linear-gradient(135deg, #D86F33 0%, #E88A5A 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -288,7 +292,7 @@
         
         .text-typing {
             overflow: hidden;
-            border-right: 2px solid rgba(245, 158, 11, 0.5);
+            border-right: 2px solid rgba(216, 111, 51, 0.5);
             white-space: nowrap;
             animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
         }
@@ -307,7 +311,7 @@
                 border-color: transparent;
             }
             50% {
-                border-color: rgba(245, 158, 11, 0.5);
+                border-color: rgba(216, 111, 51, 0.5);
             }
         }
         
@@ -325,7 +329,7 @@
         }
         
         .hero-overlay {
-            background: linear-gradient(135deg, rgba(11, 31, 51, 0.85) 0%, rgba(11, 31, 51, 0.75) 50%, rgba(11, 31, 51, 0.85) 100%);
+            background: linear-gradient(135deg, rgba(47, 46, 42, 0.85) 0%, rgba(47, 46, 42, 0.75) 50%, rgba(47, 46, 42, 0.85) 100%);
         }
         
         .hero-background {
@@ -348,7 +352,7 @@
             min-height: 100%;
             width: auto;
             height: auto;
-            background-color: #0B1F33; /* Color de fondo mientras carga */
+            background-color: #2F2E2A; /* Color de fondo mientras carga */
             transition: opacity 0.8s ease-in;
         }
         
@@ -427,7 +431,7 @@
         .decorative-line {
             height: 3px;
             width: 60px;
-            background: linear-gradient(90deg, transparent, #F59E0B, transparent);
+            background: linear-gradient(90deg, transparent, #D86F33, transparent);
             margin: 0 auto;
             border-radius: 2px;
         }
@@ -491,7 +495,7 @@
     <div id="main-content">
     
     <!-- Header / Navbar -->
-    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black backdrop-blur-sm">
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-sm" style="background-color: #2F2E2A;">
         <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <!-- Logo -->
@@ -825,21 +829,21 @@
         </div>
     </section>
 
-    <!-- Crecimiento Section -->
+        <!-- Crecimiento Section -->
     <section id="crecimiento" class="py-16 sm:py-20 lg:py-28 bg-gradient-to-b from-background-light to-white relative overflow-hidden">
         <!-- Elementos decorativos de fondo -->
-        <div class="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
+        <div class="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl" style="background-color: rgba(216, 111, 51, 0.05);"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl" style="background-color: rgba(216, 111, 51, 0.05);"></div>
         
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-7xl mx-auto">
                 <!-- Encabezado -->
                 <div class="text-center mb-16 lg:mb-20">
                     <div class="inline-block mb-4">
-                        <span class="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold">Nuestra Historia</span>
+                        <span class="px-4 py-2 rounded-full text-sm font-semibold" style="background-color: rgba(216, 111, 51, 0.1); color: #D86F33;">Nuestra Historia</span>
                     </div>
                     <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-dark mb-6">
-                        Crecimiento <span class="text-accent">2020–2025</span>
+                        Crecimiento <span style="color: #D86F33;">2020–2025</span>
                     </h2>
                     <div class="max-w-3xl mx-auto space-y-4 text-lg sm:text-xl text-gray-700 leading-relaxed">
                         <p>
@@ -855,7 +859,7 @@
                 <div class="relative">
                     <!-- Línea de tiempo con gradiente -->
                     <div class="hidden md:block absolute top-32 left-0 right-0 h-2 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 rounded-full">
-                        <div class="h-full bg-gradient-to-r from-accent via-accent-dark to-accent rounded-full shadow-lg" style="width: 100%;"></div>
+                        <div class="h-full rounded-full shadow-lg" style="width: 100%; background: linear-gradient(to right, #D86F33, #C45F28, #D86F33);"></div>
                     </div>
 
                     <!-- Hitos -->
@@ -863,16 +867,16 @@
                         <!-- Hito 1: 2020 -->
                         <div class="relative group">
                             <!-- Tarjeta -->
-                            <div class="bg-white rounded-2xl p-8 lg:p-10 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 mt-16 md:mt-0 group-hover:border-accent/30 group-hover:-translate-y-2">
+                            <div class="bg-white rounded-2xl p-8 lg:p-10 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 mt-16 md:mt-0 group-hover:-translate-y-2" style="--hover-border: rgba(216, 111, 51, 0.3);" onmouseenter="this.style.borderColor='rgba(216, 111, 51, 0.3)'" onmouseleave="this.style.borderColor='rgb(243, 244, 246)'">
                                 <!-- Icono decorativo -->
-                                <div class="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors duration-300">
-                                    <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300" style="background-color: rgba(216, 111, 51, 0.1);">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: #D86F33;">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                                     </svg>
                                 </div>
                                 
                                 <!-- Año -->
-                                <div class="text-4xl lg:text-5xl font-bold text-accent mb-3">2020</div>
+                                <div class="text-4xl lg:text-5xl font-bold mb-3" style="color: #D86F33;">2020</div>
                                 
                                 <!-- Título -->
                                 <h3 class="text-2xl font-bold text-primary-dark mb-4">Fundación</h3>
@@ -889,7 +893,7 @@
                                         <span class="text-3xl font-bold text-primary-dark">10</span>
                                     </div>
                                     <div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden">
-                                        <div class="bg-gradient-to-r from-accent to-accent-dark h-4 rounded-full transition-all duration-1000 shadow-md" style="width: 33.33%;"></div>
+                                        <div class="h-4 rounded-full transition-all duration-1000 shadow-md" style="width: 33.33%; background: linear-gradient(to right, #D86F33, #C45F28);"></div>
                                     </div>
                                 </div>
                             </div>
@@ -898,16 +902,16 @@
                         <!-- Hito 2: 2022 -->
                         <div class="relative group">
                             <!-- Tarjeta -->
-                            <div class="bg-white rounded-2xl p-8 lg:p-10 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 mt-16 md:mt-0 group-hover:border-accent/30 group-hover:-translate-y-2">
+                            <div class="bg-white rounded-2xl p-8 lg:p-10 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 mt-16 md:mt-0 group-hover:-translate-y-2" style="--hover-border: rgba(216, 111, 51, 0.3);" onmouseenter="this.style.borderColor='rgba(216, 111, 51, 0.3)'" onmouseleave="this.style.borderColor='rgb(243, 244, 246)'">
                                 <!-- Icono decorativo -->
-                                <div class="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors duration-300">
-                                    <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300" style="background-color: rgba(216, 111, 51, 0.1);">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: #D86F33;">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                                     </svg>
                                 </div>
                                 
                                 <!-- Año -->
-                                <div class="text-4xl lg:text-5xl font-bold text-accent mb-3">2022</div>
+                                <div class="text-4xl lg:text-5xl font-bold mb-3" style="color: #D86F33;">2022</div>
                                 
                                 <!-- Título -->
                                 <h3 class="text-2xl font-bold text-primary-dark mb-4">Consolidación y expansión</h3>
@@ -924,7 +928,7 @@
                                         <span class="text-3xl font-bold text-primary-dark">20</span>
                                     </div>
                                     <div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden">
-                                        <div class="bg-gradient-to-r from-accent to-accent-dark h-4 rounded-full transition-all duration-1000 shadow-md" style="width: 66.66%;"></div>
+                                        <div class="h-4 rounded-full transition-all duration-1000 shadow-md" style="width: 66.66%; background: linear-gradient(to right, #D86F33, #C45F28);"></div>
                                     </div>
                                 </div>
                             </div>
@@ -933,16 +937,16 @@
                         <!-- Hito 3: 2025 -->
                         <div class="relative group">
                             <!-- Tarjeta -->
-                            <div class="bg-white rounded-2xl p-8 lg:p-10 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 mt-16 md:mt-0 group-hover:border-accent/30 group-hover:-translate-y-2">
+                            <div class="bg-white rounded-2xl p-8 lg:p-10 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 mt-16 md:mt-0 group-hover:-translate-y-2" style="--hover-border: rgba(216, 111, 51, 0.3);" onmouseenter="this.style.borderColor='rgba(216, 111, 51, 0.3)'" onmouseleave="this.style.borderColor='rgb(243, 244, 246)'">
                                 <!-- Icono decorativo -->
-                                <div class="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors duration-300">
-                                    <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300" style="background-color: rgba(216, 111, 51, 0.1);">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: #D86F33;">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
                                     </svg>
                                 </div>
                                 
                                 <!-- Año -->
-                                <div class="text-4xl lg:text-5xl font-bold text-accent mb-3">2025</div>
+                                <div class="text-4xl lg:text-5xl font-bold mb-3" style="color: #D86F33;">2025</div>
                                 
                                 <!-- Título -->
                                 <h3 class="text-2xl font-bold text-primary-dark mb-4">Crecimiento constante</h3>
@@ -959,7 +963,7 @@
                                         <span class="text-3xl font-bold text-primary-dark">30</span>
                                     </div>
                                     <div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden">
-                                        <div class="bg-gradient-to-r from-accent to-accent-dark h-4 rounded-full transition-all duration-1000 shadow-md" style="width: 100%;"></div>
+                                        <div class="h-4 rounded-full transition-all duration-1000 shadow-md" style="width: 100%; background: linear-gradient(to right, #D86F33, #C45F28);"></div>
                                     </div>
                                 </div>
                             </div>
@@ -1035,7 +1039,7 @@
     </section>
 
     <!-- Contacto Section -->
-    <section id="contacto" class="py-16 sm:py-20 lg:py-24 relative bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(rgba(11, 31, 51, 0.9), rgba(11, 31, 51, 0.9)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80');">
+    <section id="contacto" class="py-16 sm:py-20 lg:py-24 relative bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(rgba(47, 46, 42, 0.9), rgba(47, 46, 42, 0.9)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80');">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-7xl mx-auto">
                 <!-- Encabezado -->
@@ -1056,8 +1060,8 @@
                             <div class="space-y-6">
                                 <!-- Teléfono -->
                                 <div class="flex items-start">
-                                    <div class="bg-accent/20 p-3 rounded-lg mr-4">
-                                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <div class="p-3 rounded-lg mr-4" style="background-color: rgba(216, 111, 51, 0.2);">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: #D86F33;">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                                         </svg>
                                     </div>
@@ -1069,8 +1073,8 @@
 
                                 <!-- Email -->
                                 <div class="flex items-start">
-                                    <div class="bg-accent/20 p-3 rounded-lg mr-4">
-                                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <div class="p-3 rounded-lg mr-4" style="background-color: rgba(216, 111, 51, 0.2);">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: #D86F33;">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                                         </svg>
                                     </div>
@@ -1082,8 +1086,8 @@
 
                                 <!-- Ubicación -->
                                 <div class="flex items-start">
-                                    <div class="bg-accent/20 p-3 rounded-lg mr-4">
-                                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <div class="p-3 rounded-lg mr-4" style="background-color: rgba(216, 111, 51, 0.2);">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: #D86F33;">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                                         </svg>
@@ -1121,7 +1125,7 @@
                                 <textarea id="mensaje" name="mensaje" required rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all resize-none" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
                             </div>
 
-                            <button type="submit" class="w-full bg-accent text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-accent-dark transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            <button type="submit" class="w-full text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1" style="background-color: #D86F33;" onmouseover="this.style.backgroundColor='#C45F28'" onmouseout="this.style.backgroundColor='#D86F33'">
                                 Contactar ahora
                             </button>
                         </form>
@@ -1132,7 +1136,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-primary-dark text-white py-12 lg:py-16">
+    <footer class="text-white py-12 lg:py-16" style="background-color: #2F2E2A;">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-7xl mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-8">
@@ -1150,11 +1154,11 @@
                     <div>
                         <h3 class="text-lg font-bold mb-4">Enlaces rápidos</h3>
                         <ul class="space-y-2">
-                            <li><a href="#inicio" class="text-gray-400 hover:text-accent transition-colors duration-200 text-sm">Inicio</a></li>
-                            <li><a href="#quienes-somos" class="text-gray-400 hover:text-accent transition-colors duration-200 text-sm">¿Quiénes somos?</a></li>
-                            <li><a href="#proyectos" class="text-gray-400 hover:text-accent transition-colors duration-200 text-sm">Proyectos</a></li>
-                            <li><a href="#crecimiento" class="text-gray-400 hover:text-accent transition-colors duration-200 text-sm">Crecimiento</a></li>
-                            <li><a href="#contacto" class="text-gray-400 hover:text-accent transition-colors duration-200 text-sm">Contacto</a></li>
+                            <li><a href="#inicio" class="text-gray-400 transition-colors duration-200 text-sm" style="--hover-color: #D86F33;" onmouseover="this.style.color='#D86F33'" onmouseout="this.style.color='rgb(156, 163, 175)'">Inicio</a></li>
+                            <li><a href="#quienes-somos" class="text-gray-400 transition-colors duration-200 text-sm" onmouseover="this.style.color='#D86F33'" onmouseout="this.style.color='rgb(156, 163, 175)'">¿Quiénes somos?</a></li>
+                            <li><a href="#proyectos" class="text-gray-400 transition-colors duration-200 text-sm" onmouseover="this.style.color='#D86F33'" onmouseout="this.style.color='rgb(156, 163, 175)'">Proyectos</a></li>
+                            <li><a href="#crecimiento" class="text-gray-400 transition-colors duration-200 text-sm" onmouseover="this.style.color='#D86F33'" onmouseout="this.style.color='rgb(156, 163, 175)'">Crecimiento</a></li>
+                            <li><a href="#contacto" class="text-gray-400 transition-colors duration-200 text-sm" onmouseover="this.style.color='#D86F33'" onmouseout="this.style.color='rgb(156, 163, 175)'">Contacto</a></li>
                         </ul>
                     </div>
 
@@ -1163,8 +1167,8 @@
                         <h3 class="text-lg font-bold mb-4">Contacto</h3>
                         <ul class="space-y-2 text-sm text-gray-400">
                             <li>Jalisco y Nayarit, México</li>
-                            <li><a href="mailto:[correo]" class="hover:text-accent transition-colors duration-200">[Correo de contacto]</a></li>
-                            <li><a href="tel:[telefono]" class="hover:text-accent transition-colors duration-200">[Teléfono de contacto]</a></li>
+                            <li><a href="mailto:[correo]" class="transition-colors duration-200" onmouseover="this.style.color='#D86F33'" onmouseout="this.style.color='rgb(156, 163, 175)'">[Correo de contacto]</a></li>
+                            <li><a href="tel:[telefono]" class="transition-colors duration-200" onmouseover="this.style.color='#D86F33'" onmouseout="this.style.color='rgb(156, 163, 175)'">[Teléfono de contacto]</a></li>
                         </ul>
                     </div>
                 </div>
