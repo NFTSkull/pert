@@ -9,13 +9,18 @@ window.addEventListener('scroll', function() {
         header.classList.add('bg-white/90');
     }
     
-    // Parallax effect for hero background
+    // Parallax effect for hero background (video)
+    // Nota: Para videos, solo mantenemos la animación CSS de zoom para mejor rendimiento
+    // El parallax se desactiva para videos ya que puede causar problemas de rendimiento
     const hero = document.getElementById('inicio');
     if (hero) {
-        const scrolled = window.pageYOffset;
         const heroBackground = hero.querySelector('.hero-background');
-        if (heroBackground && scrolled < window.innerHeight) {
-            heroBackground.style.transform = `translateY(${scrolled * 0.5}px) scale(${1 + scrolled * 0.0005})`;
+        // Si es un video, no aplicamos parallax adicional (solo la animación CSS)
+        if (heroBackground && heroBackground.tagName !== 'VIDEO') {
+            const scrolled = window.pageYOffset;
+            if (scrolled < window.innerHeight) {
+                heroBackground.style.transform = `translateY(${scrolled * 0.5}px) scale(${1 + scrolled * 0.0005})`;
+            }
         }
     }
 });

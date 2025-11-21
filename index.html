@@ -147,6 +147,7 @@
         
         .hero-background {
             animation: zoom-in 20s ease-in-out infinite alternate;
+            z-index: 0;
         }
         
         @keyframes zoom-in {
@@ -156,6 +157,14 @@
             100% {
                 transform: scale(1.1);
             }
+        }
+        
+        /* Estilos para el video de fondo */
+        video.hero-background {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
         }
         
         .fade-in-up {
@@ -307,11 +316,25 @@
 
     <!-- Hero Section -->
     <section id="inicio" class="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <!-- Background con efecto parallax -->
-        <div class="absolute inset-0 hero-background bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80');"></div>
+        <!-- Fallback de imagen de fondo (para navegadores que no soportan video) -->
+        <div class="absolute inset-0 hero-background bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80'); z-index: 0;"></div>
+        
+        <!-- Video de fondo -->
+        <video 
+            class="absolute inset-0 w-full h-full object-cover hero-background" 
+            autoplay 
+            muted 
+            loop 
+            playsinline
+            preload="auto"
+            style="z-index: 1;"
+        >
+            <source src="video-hero-optimized.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+        </video>
         
         <!-- Overlay con gradiente -->
-        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="absolute inset-0 hero-overlay" style="z-index: 2;"></div>
         
         <!-- Formas decorativas flotantes -->
         <div class="floating-shape" style="top: 10%; left: 10%; width: 200px; height: 200px; background: radial-gradient(circle, #F59E0B 0%, transparent 70%); border-radius: 50%;"></div>
@@ -398,7 +421,7 @@
 
                     <!-- Columna derecha: Imagen -->
                     <div class="relative h-64 sm:h-80 lg:h-96 rounded-2xl overflow-hidden shadow-xl">
-                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Equipo de trabajo y planos de construcción" class="w-full h-full object-cover">
+                        <img src="quienes-somos.JPG" alt="Equipo de trabajo y planos de construcción" class="w-full h-full object-cover">
                     </div>
                 </div>
 
@@ -460,7 +483,7 @@
                     <!-- Proyecto 1: Ajijic Casa #20 -->
                     <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
                         <div class="relative h-48 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Ajijic Casa #20" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                            <img src="ajijic.png" alt="Ajijic Casa #20" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
                             <div class="absolute top-4 right-4">
                                 <span class="px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">Residencial</span>
                             </div>
@@ -481,7 +504,7 @@
                     <!-- Proyecto 2: Arama Bay -->
                     <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
                         <div class="relative h-48 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80" alt="Arama Bay" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                            <img src="arama-bay.png" alt="Arama Bay" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
                             <div class="absolute top-4 right-4">
                                 <span class="px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">Residencial</span>
                             </div>
@@ -502,7 +525,7 @@
                     <!-- Proyecto 3: Brisamare -->
                     <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
                         <div class="relative h-48 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Brisamare" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                            <img src="brisamare.png" alt="Brisamare" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
                             <div class="absolute top-4 right-4">
                                 <span class="px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">Comercial</span>
                             </div>
@@ -544,7 +567,7 @@
                     <!-- Proyecto 5: Lancor -->
                     <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
                         <div class="relative h-48 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Lancor" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                            <img src="el-capulin.png" alt="Lancor" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
                             <div class="absolute top-4 right-4">
                                 <span class="px-3 py-1 rounded-full text-xs font-semibold bg-orange-100 text-orange-800">Infraestructura</span>
                             </div>
@@ -565,7 +588,7 @@
                     <!-- Proyecto 6: Mayama -->
                     <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
                         <div class="relative h-48 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80" alt="Mayama" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                            <img src="mayama.png" alt="Mayama" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
                             <div class="absolute top-4 right-4">
                                 <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-100 text-purple-800">Desarrollo Social</span>
                             </div>

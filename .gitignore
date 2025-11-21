@@ -16,3 +16,6 @@
 # Next.js (si quedan archivos)
 .next/
 node_modules/
+
+# Videos originales pesados (mantener solo versiones optimizadas)
+video-hero.mp4
