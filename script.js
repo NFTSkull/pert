@@ -2,11 +2,11 @@
 window.addEventListener('scroll', function() {
     const header = document.getElementById('header');
     if (window.scrollY > 20) {
-        header.classList.remove('bg-white/90');
-        header.classList.add('bg-white/95', 'shadow-md');
+        header.classList.remove('bg-black');
+        header.classList.add('bg-black/95', 'shadow-lg');
     } else {
-        header.classList.remove('bg-white/95', 'shadow-md');
-        header.classList.add('bg-white/90');
+        header.classList.remove('bg-black/95', 'shadow-lg');
+        header.classList.add('bg-black');
     }
     
     // Parallax effect for hero background (video)
